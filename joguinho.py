@@ -97,30 +97,38 @@ def andar(direcao, posicao_i, posicao_j):
         matriz.clear()
     return retorno
     
-
+print("APERTE ESC PARA FINALIZAR")
 print("INICIO\n")
 retorno = andar("i",meio_coluna,meio_linha)
 print(retorno)
-
-print("ANDEI PRA CIMA\n")
-retorno = andar("w",retorno[0],retorno[1])
-print(retorno)
-print("ANDEI PRA BAIXO\n")
-retorno = andar("s",retorno[0],retorno[1])
-print(retorno)
-
-print("ANDEI PRA ESQUERDA\n")
-retorno = andar("a",retorno[0],retorno[1])
-print(retorno)
-
-print("ANDEI PRA DIREITA\n")
-retorno = andar("d",retorno[0],retorno[1])
-print(retorno)
+while(True):
     
-
-'''
-if keyboard.is_pressed('w'):
-    direcao = 'w'
-    retorno = andar(direcao,retorno[0], retorno[1])
-    print(retorno)
-'''
+    if keyboard.is_pressed('w'):
+        os.system('cls')
+        print("APERTE ESC PARA FINALIZAR")
+        print("ANDEI PRA CIMA\n")
+        retorno = andar("w",retorno[0],retorno[1])
+        print(retorno)
+    if keyboard.is_pressed('s'):
+        os.system('cls')
+        print("APERTE ESC PARA FINALIZAR")
+        print("ANDEI PRA BAIXO\n")
+        retorno = andar("s",retorno[0],retorno[1])
+        print(retorno)
+    if keyboard.is_pressed('a'):
+        os.system('cls')
+        print("APERTE ESC PARA FINALIZAR")
+        print("ANDEI PRA ESQUERDA\n")
+        retorno = andar("a",retorno[0],retorno[1])
+        print(retorno)
+    if keyboard.is_pressed('d'):
+        os.system('cls')
+        print("APERTE ESC PARA FINALIZAR")
+        print("ANDEI PRA DIREITA\n")
+        retorno = andar("d",retorno[0],retorno[1])
+        print(retorno)
+    
+    if keyboard.is_pressed('esc'):
+        print("JOGO FINALIZADO")
+        os.system('pause')
+        break
